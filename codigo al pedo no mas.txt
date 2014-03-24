@@ -1,0 +1,17 @@
+$db= DB::getInstance()->(""usuarios")->results();
+foreach($db as $row){
+	echo "Mi usuario es" . $row->usuario . "<br>";
+}
+
+//$db= new DB();
+//$sql= "SELECT * FROM usuarios WHERE usuario = ? AND clave = ? ";
+//$db= DB::getInstance() ->consultar($sql,array( 'vani', shal('1234')));
+//if($db->count()>0){
+//	echo"El usuario existe" ;
+//}else{
+//	echo "E: l usuario NO existe :( " ;
+//}
+
+//foreach($db->results() as $row){
+// echo" Mi usuario es:" . $row->usuario . "<br>";
+//}
