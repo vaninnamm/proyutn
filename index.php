@@ -5,6 +5,7 @@
 	<title>Pantalla de Inicio</title>
 </head>
 <body>
+	<h1>Sistema Proyecto UTN</h1>
 	<a href="listar_productos.php">Listar Productos</a>
 	<br>
 	<a href="agregar_productos.php">Agregar Productos</a>
