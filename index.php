@@ -6,6 +6,7 @@
 </head>
 <body>
 	<h1>Sistema Proyecto UTN</h1>
+	<h2>ABM de Productos</h2>
 	<a href="listar_productos.php">Listar Productos</a>
 	<br>
 	<a href="agregar_productos.php">Agregar Productos</a>
