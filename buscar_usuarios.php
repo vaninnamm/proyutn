@@ -1,7 +1,16 @@
 <?php
 	require_once 'core/init.php';
 	
-	$users= DB::getInstance()->get("usuarios")->results();
+	$buscar = $_GET["q"];
+	$sql = "SELECT * FROM usuarios
+		
+			WHERE
+				usuario LIKE ?
+			ORDER BY 
+				id DESC
+		";
+	
+	$users= DB::getInstance()->consultar($sql,array("%".$buscar."%"))->results();
 	
 ?>
 <!doctype html>
@@ -15,7 +24,7 @@
 	<br>
 	<a href="agregar_usuarios.php">Agregar Usuarios</a>
 	<br><br>
-	<form action="buscar_usuarios.php" method= "get">
+	<form action="buscar.php" method= "get">
 		Buscar <input type = "search" name="q" id="q">
 		<input type="submit" name = "btoBuscar" value="Buscar">
 	</form>
@@ -25,7 +34,7 @@
 			<th>Usuario</th>
 			<th>Clave</th>
 			<th>Privilegio</th>
-			<th>token</th>			
+			<th>Token</th>			
 		</tr>
 		<?php foreach($users as $row){ ?>
 		<tr>
