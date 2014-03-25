@@ -27,6 +27,8 @@
 	<a href="listar_usuarios.php">Listar Usuarios</a>
 	<br>
 	<a href="agregar_usuarios.php">Agregar Usuarios</a>
+	<br>
+	<a href="salir.php">SALIR</a>
 </body>
 </html>
 

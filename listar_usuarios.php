@@ -6,7 +6,6 @@
 		header("Location: login.php");
 	}
 	
-	
 	$users= DB::getInstance()->get("usuarios")->results();
 	
 ?>
