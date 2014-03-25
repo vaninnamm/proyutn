@@ -1,3 +1,16 @@
+<?php
+	require_once 'core/init.php';
+	
+	if(!Session::exists("LoginTrue") OR !Session::get("LoginTrue") ){
+		Session::logout();
+		header("Location:login.php");
+	}
+	if(Session::exists("ok")){
+		echo Session::flash("ok");
+	}
+?>
+
+
 <!doctype html>
 <html lang="en">
 <head>

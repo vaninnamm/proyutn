@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 define('URL_BASE','http://localhost/proyutn/');
 

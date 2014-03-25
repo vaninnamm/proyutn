@@ -1,6 +1,11 @@
 <?php
 	require_once 'core/init.php';
 	
+	if(!Session::exists("LoginTrue") OR !Session::get("LoginTrue") ){
+		Session::flash("no");
+		header("Location: login.php");
+	}
+		
 	//$productos= DB::getInstance()->get("productos")->results();
 	$sql = "SELECT 
 				p.id, p.producto,p.cantidad, p.precio,
